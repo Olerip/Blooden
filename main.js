@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-var auth = require('./auth.json')
 
 var prefix = "bd!";
 var bot = new Discord.Client()

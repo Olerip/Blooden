@@ -1,0 +1,8 @@
+{
+  "name": "Blooden",
+  "version": "0.1.0",
+  "description": "Blooden discord bot",
+  "main": "main.js",
+  "author": "Olerip",
+  "dependencies": {}
+}

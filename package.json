@@ -4,5 +4,8 @@
   "description": "Blooden discord bot",
   "main": "bot.js",
   "author": "Olerip",
+    "scripts": {
+    "start": "node bot.js"
+  },
   "dependencies": {}
 }

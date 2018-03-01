@@ -54,7 +54,7 @@ client.on("message", async message => {
   if (message.author.bot) return;
 
   if (message.content === "Elle est où la poulette ?") {
-    message.channel.sendMessage("Elle est bien cachée ?");
+    message.channel.send("Elle est bien cachée ?");
   }
 
 
@@ -162,21 +162,21 @@ client.on("message", async message => {
     ///const fetched = await message.channel.fetchMessages({count: deleteCount});
     message.channel.bulkDelete(deleteCount)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-    message.channel.sendMessage(`Suppression des ${deleteCount} derniers messages.`)
+    message.channel.send(`Suppression des ${deleteCount} derniers messages.`)
   }
   if (command === "cc") {
     var coucfeaf = client.users.get("216548534743334914");
-    message.channel.sendMessage(`<@${coucfeaf.id}> va bien te faire enculer`);
+    message.channel.send(`<@${coucfeaf.id}> va bien te faire enculer`);
   }
   if (command === "set") {
     message.delete();
     let member = message.mentions.members.first();
     if (rpistesID.includes(member.id)) {
       indexi = rpistesID.indexOf(member.id);
-      message.channel.sendMessage(`C'est à <@${rpistes[indexi].id}> de répondre !`);
+      message.channel.send(`C'est à <@${rpistes[indexi].id}> de répondre !`);
     }
     else {
-      message.channel.sendMessage(`<@${member.id}> n'appartient pas au RP !`);
+      message.channel.send(`<@${member.id}> n'appartient pas au RP !`);
     }
   }
   if (command === "next") {
@@ -185,7 +185,7 @@ client.on("message", async message => {
     if (indexi == rpistes.length)
       indexi = 0;
 
-    message.channel.sendMessage(`C'est à <@${rpistes[indexi].id}> de répondre !`);
+    message.channel.send(`C'est à <@${rpistes[indexi].id}> de répondre !`);
   }
   if (command === "prev") {
     message.delete();
@@ -193,11 +193,11 @@ client.on("message", async message => {
     if (indexi == 0)
       indexi = rpistes.length;
 
-    message.channel.sendMessage(`C'est à <@${rpistes[indexi].id}> de répondre !`);
+    message.channel.send(`C'est à <@${rpistes[indexi].id}> de répondre !`);
   }
   if (command === "rap") {
     message.delete();
-    message.channel.sendMessage(`C'est à <@${rpistes[indexi].id}> de répondre !`);
+    message.channel.send(`C'est à <@${rpistes[indexi].id}> de répondre !`);
   }
   if (command === "help") {
     if (message.guild.id == "356146772638171138") {
